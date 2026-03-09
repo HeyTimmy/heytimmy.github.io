@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffhouse Renton | Redesign Concept</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <nav class="flex items-center justify-between px-8 py-4 bg-black text-white sticky top-0 z-50">
+        <div class="text-2xl font-black tracking-tighter italic">RUFFHOUSE <span class="text-red-600">RENTON</span></div>
+        <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm">
+            <a href="#" class="hover:text-red-500">BJJ</a>
+            <a href="#" class="hover:text-red-500">Muay Thai</a>
+            <a href="#" class="hover:text-red-500">Kids</a>
+            <a href="#" class="hover:text-red-500">Schedule</a>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold transition">FREE TRIAL</button>
+    </nav>
+
+    <header class="hero-gradient h-[80vh] flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-white text-5xl md:text-7xl font-black uppercase mb-4 leading-tight">
+            Stop Searching.<br><span class="text-red-600">Start Training.</span>
+        </h1>
+        <p class="text-gray-200 text-xl md:text-2xl mb-8 max-w-2xl">
+            Renton's premier destination for World-Class BJJ and Striking. High-level instruction. No ego. Results driven.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="cta-pulse bg-red-600 hover:bg-red-700 text-white text-xl px-10 py-4 rounded-md font-black uppercase transition shadow-2xl">
+                Claim Your Free Intro Class
+            </button>
+            <button class="bg-white hover:bg-gray-100 text-black text-xl px-10 py-4 rounded-md font-black uppercase transition">
+                View Membership Rates
+            </button>
+        </div>
+    </header>
+
+    <section class="bg-red-600 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-around text-center gap-8">
+            <div><p class="text-4xl font-black">150+</p><p class="uppercase text-sm font-bold">5-Star Reviews</p></div>
+            <div><p class="text-4xl font-black">20+</p><p class="uppercase text-sm font-bold">Years Experience</p></div>
+            <div><p class="text-4xl font-black">0</p><p class="uppercase text-sm font-bold">Egos Allowed</p></div>
+            <div><p class="text-4xl font-black">ALL</p><p class="uppercase text-sm font-bold">Levels Welcome</p></div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-black text-center uppercase mb-16">Your First Week at Ruffhouse</h2>
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-red-600">
+                <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+                <h3 class="text-xl font-bold mb-4">Book Your Orientation</h3>
+                <p class="text-gray-600">Schedule a 15-minute tour and intro session so you know exactly what to expect.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-red-600">
+                <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+                <h3 class="text-xl font-bold mb-4">Try a Class (On Us)</h3>
+                <p class="text-gray-600">Jump into a beginner-friendly class. No gear? No problem. We’ve got you covered.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-red-600">
+                <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+                <h3 class="text-xl font-bold mb-4">Choose Your Path</h3>
+                <p class="text-gray-600">If you love it (and you will), we'll help you pick a membership that fits your schedule.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="relative overflow-hidden rounded-2xl group">
+                    <img src="https://images.unsplash.com/photo-1599058917233-3580e21c609c?q=80&w=800" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 p-8 flex flex-col justify-end">
+                        <h4 class="text-white text-3xl font-black uppercase">Adult BJJ</h4>
+                        <p class="text-gray-200 mb-4">Master the "Gentle Art." Build functional strength and elite-level skill.</p>
+                        <button class="w-fit border-2 border-white text-white px-6 py-2 font-bold hover:bg-white hover:text-black transition">View BJJ Schedule</button>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl group">
+                    <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=800" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/50 p-8 flex flex-col justify-end">
+                        <h4 class="text-white text-3xl font-black uppercase">Striking / Muay Thai</h4>
+                        <p class="text-gray-200 mb-4">Dynamic cardio and technical striking in a safe environment.</p>
+                        <button class="w-fit border-2 border-white text-white px-6 py-2 font-bold hover:bg-white hover:text-

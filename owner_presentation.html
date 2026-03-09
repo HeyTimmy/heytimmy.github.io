@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffhouse Renton | Redesign Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            padding: 4rem;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: -1;
+        }
+        h1 { font-size: 4rem; font-weight: 900; color: #e50914; text-transform: uppercase; margin-bottom: 2rem; }
+        h2 { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; }
+        p { font-size: 1.5rem; color: #ccc; max-width: 800px; line-height: 1.6; }
+        
+        #start-btn {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background-color: #e50914;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(229,9,20,0.5);
+            z-index: 100;
+            transition: transform 0.2s;
+        }
+        #start-btn:hover { transform: scale(1.05); }
+
+        .subtitles {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 1000;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="start-btn">Start Presentation</button>
+    <div class="subtitles" id="subtitles"></div>
+
+    <div class="slide" id="slide-0" style="background-image: url('assets/hero-bg.png');">
+        <h1>Ruffhouse Renton</h1>
+        <h2>The Digital Evolution</h2>
+        <p>A strategy to turn Instagram likes into actual bodies on the mats.</p>
+    </div>
+
+    <div class="slide" id="slide-1">
+        <h1>The Problem</h1>
+        <h2>Social Media vs. Conversions</h2>
+        <p>You're posting great content on Instagram and Facebook. People see it, they get hyped, they click the link... and then they get confused. An old website is a leaky bucket. You do the hard work of getting their attention, but the website fails to close the deal.</p>
+    </div>
+
+    <div class="slide" id="slide-2" style="background-image: url('assets/bjj.png');">
+        <h1>The Solution</h1>
+        <h2>A High-Converting Sales Funnel</h2>
+        <p>We don't just need an online brochure; we need a sales machine. The new Ruffhouse Renton site is designed to do one thing: get people to book a free trial class.</p>
+    </div>
+
+    <div class="slide" id="slide-3" style="background-image: url('assets/hero-bg.png');">
+        <h1>The Hero Section</h1>
+        <h2>"Stop Searching. Start Training."</h2>
+        <p>We hit them immediately with a premium, high-energy look. No thinking required. The big red button tells them exactly what to do next.</p>
+    </div>
+
+    <div class="slide" id="slide-4">
+        <h1>Frictionless Onboarding</h1>
+        <h2>Removing The Fear</h2>
+        <p>Walking into a BJJ or Muay Thai gym for the first time is terrifying for a normal person. We added a "Your First Week" section that breaks it down into 3 simple, non-threatening steps. We show them we have loaner gear and there are zero egos allowed.</p>
+    </div>
+
+    <div class="slide" id="slide-5" style="background-image: url('assets/muay-thai.png');">
+        <h1>Social Proof</h1>
+        <h2>Let Your Students Sell For You</h2>
+        <p>We take your 5-star reviews and put them front and center. When a prospect sees that other beginners felt welcomed and safe, their objections disappear.</p>
+    </div>
+
+    <div class="slide" id="slide-6">
+        <h1>The Close</h1>
+        <h2>The Unified Lead Form</h2>
+        <p>At the bottom of the page, there are no distractions. Just a clean form asking for their Name, Email, Phone, and Program of Interest. This goes straight to your inbox so you or the coaches can call them while they are still highly motivated.</p>
+    </div>
+
+    <div class="slide" id="slide-7" style="background-image: url('assets/hero-bg.png');">
+        <h1>In Conclusion</h1>
+        <h2>Old School Values, New School Tech</h2>
+        <p>We keep the pure, hard-training essence of Ruffhouse Renton, but we package it in a way that modern consumers understand and trust. Let's get these new students on the mats.</p>
+    </div>
+
+    <script>
+        const script = [
+            { slide: 0, text: "Professor, Coaches. What's up. This is a quick presentation on the new digital evolution for Ruffhouse Renton." },
+            { slide: 1, text: "Let's talk about the problem. You guys are doing the hard work. You're teaching great classes, and the new social media push is getting attention. But when people click from Instagram to an outdated website, we lose them. It's a leaky bucket." },
+            { slide: 2, text: "The solution is what we call a high-converting sales funnel. We aren't just building a digital brochure. We built a machine designed to do one thing: get that Instagram traffic to book a free trial and step onto the mats." },
+            { slide: 3, text: "It starts with the Hero Section. They land on the page, and boom. High quality imagery. A bold statement: Stop Searching, Start Training. And a giant red button that tells them exactly what to do next." },
+            { slide: 4, text: "Now, for a beginner, walking into a martial arts gym is terrifying. To fix this, we added a 'Your First Week' section. It breaks the process down into three simple, frictionless steps to remove their fear and anxiety." },
+            { slide: 5, text: "Next, we use Social Proof. We highlight your 150 plus 5-star reviews. When prospects see that other normal people came in, felt safe, and learned real technique, their objections completely disappear." },
+            { slide: 6, text: "Finally, the close. At the bottom of the page, we capture the lead. A simple form for their name, phone number, and what program they want. This lets your team call them immediately while they are still hyped from that Instagram post." },
+            { slide: 7, text: "In conclusion. We are keeping the old school, hard-training lineage of Ruffhouse Renton, but we are wrapping it in a premium modern package. Let's launch this, fill the funnels, and get these new students on the mats." }
+        ];
+
+        let currentSlide = -1;
+        const synth = window.speechSynthesis;
+        let voice = null;
+        const subtitlesDiv = document.getElementById('subtitles');
+
+        function startPresentation() {
+            document.getElementById('start-btn').style.display = 'none';
+
+            // Find a good English voice
+            const voices = synth.getVoices();
+            voice = voices.find(v => v.lang.includes('en-US')) || voices[0];
+
+            nextSlide();
+        }
+
+        function nextSlide() {
+            if (currentSlide >= 0) {
+                document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+            }
+            
+            currentSlide++;
+            
+            if (currentSlide < script.length) {
+                document.getElementById(`slide-${currentSlide}`).classList.add('active');
+                speak(script[currentSlide].text, () => {
+                    setTimeout(nextSlide, 1000); // Wait 1s between slides
+                });
+            } else {
+                subtitlesDiv.innerText = "End of Presentation.";
+            }
+        }
+
+        function speak(text, callback) {
+            subtitlesDiv.innerText = text;
+            
+            if (!synth) {
+                setTimeout(callback, 3000); // Fallback if no speech synth
+                return;
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            if (voice) utterance.voice = voice;
+            utterance.rate = 0.95; // Slightly slower for clarity
+            utterance.pitch = 1;
+
+            utterance.onend = () => {
+                callback();
+            };
+
+            synth.speak(utterance);
+        }
+
+        document.getElementById('start-btn').addEventListener('click', () => {
+            // Chrome requires interaction before speech synth works natively
+            synth.resume(); 
+            startPresentation();
+        });
+
+        // Load voices early
+        synth.getVoices();
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = () => synth.getVoices();
+        }
+    </script>
+</body>
+</html>

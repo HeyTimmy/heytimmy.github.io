@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffhouse Renton | Premier Martial Arts Training</title>
+    <meta name="description" content="Explore Brazilian Jiu Jitsu, Muay Thai, and Filipino Martial Arts at Ruffhouse Renton. High-level instruction. No ego. Results driven.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">RUFFHOUSE <span>RENTON</span></a>
+            <div class="nav-links">
+                <a href="#programs">Programs</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            <a href="#contact" class="nav-cta btn btn-primary">Free Trial</a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="#programs" class="mobile-link">Programs</a>
+            <a href="#how-it-works" class="mobile-link">How It Works</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link btn btn-primary mt-4 text-center">Free Trial</a>
+        </div>
+    </div>
+
+    <header class="hero" id="home">
+        <!-- Hero Slider Backgrounds -->
+        <div class="hero-slider">
+            <!-- New Larger Group Photo -->
+            <div class="hero-slide active" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/ad996bd4-3cd0-49bc-9f47-0d433a8e7563/Screen+Shot+2024-01-09+at+3.35.41+PM.jpg');"></div>
+            <!-- Other Existing Photos -->
+            <div class="hero-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/891c94df-d443-493a-981c-bc0337935975/womens+jiu+jitsu.png'); background-position: center 20%;"></div>
+            <div class="hero-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/1672722340818-OUBWNJRD5MI0WPTD0POB/muay-thai-classes.JPG');"></div>
+            <div class="hero-slide" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/2df3525a-4fd1-461b-ad0a-f493a5b3791b/filipino-martial-arts-renton.jpg'); background-position: top center;"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-fade-up">
+                <h1 class="hero-title">
+                    Stop Searching.<br>
+                    <span class="text-accent">Start Training.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Renton's premier destination for World-Class BJJ and Striking. High-level instruction. No ego. Results driven.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large cta-pulse">Claim Your Free Intro Class</a>
+                    <a href="#programs" class="btn btn-secondary btn-large">Explore Programs</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Proof Bar at the bottom of hero -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">5-Star Reviews</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Egos Allowed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">ALL</span>
+                <span class="stat-label">Levels Welcome</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Programs Section -->
+        <section id="programs" class="section programs-section">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Elite Training Programs</h2>
+                <p class="section-subtitle">Whether you're looking to compete at the highest levels, learn practical self-defense, or just find a fun way to get in shape, we have a program for you.</p>
+            </div>
+            
+            <div class="programs-grid container">
+                <!-- Program 1: BJJ -->
+                <div class="program-card animate-on-scroll">
+                    <div class="program-img-wrapper">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/891c94df-d443-493a-981c-bc0337935975/womens+jiu+jitsu.png" alt="Brazilian Jiu Jitsu" class="program-img" style="object-position: center 20%;">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">Adult BJJ</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Master the "Gentle Art". Our BJJ classes teach ground fighting and submission grappling, blending self-defense, fitness, and mental resilience.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <!-- Program 2: Muay Thai -->
+                <div class="program-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="program-img-wrapper">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/1672722340818-OUBWNJRD5MI0WPTD0POB/muay-thai-classes.JPG" alt="Muay Thai" class="program-img">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">Muay Thai</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Step into the art of eight limbs. A powerful blend of striking techniques and fitness conditioning in a safe, ego-free environment.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <!-- Program 3: Balintawak -->
+                <div class="program-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="program-img-wrapper">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/2df3525a-4fd1-461b-ad0a-f493a5b3791b/filipino-martial-arts-renton.jpg" alt="Balintawak FMA" class="program-img" style="object-position: top center;">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">Balintawak</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Experience Filipino Martial Arts. Close-quarters combat, lightning-fast strikes, and unparalleled discipline and self-defense prowess.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <!-- Program 4: Kids BJJ -->
+                <div class="program-card animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="program-img-wrapper">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/49864482-aaae-40d8-95e2-8ba702886b52/Screen+Shot+2022-06-02+at+10.18.46+AM.jpg" alt="Kids Martial Arts" class="program-img" style="object-position: center;">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">Kids & Teens BJJ</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Develop confidence, fitness, and discipline through Jiu Jitsu. A fun and challenging environment where every child leaves in a better mood than they came in.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <!-- Program 5: Youth Wrestling -->
+                <div class="program-card animate-on-scroll" style="transition-delay: 0.4s;">
+                    <div class="program-img-wrapper">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5febfcabf528bb5a6395202b/f2b3dad0-926d-4e0f-a1d4-dec1a8348cce/Screen+Shot+2024-01-09+at+10.08.44+PM.png" alt="Youth Wrestling" class="program-img" style="object-position: center;">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">Youth Wrestling</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Build explosive power, balance, and mental toughness. Our Youth Wrestling classes forge resilience that kids carry with them on and off the mats.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+
+                <!-- Program 6: MMA -->
+                <div class="program-card animate-on-scroll" style="transition-delay: 0.5s;">
+                    <div class="program-img-wrapper">
+                        <img src="assets/mma.png" alt="Mixed Martial Arts" class="program-img" style="object-position: center;">
+                        <div class="program-overlay"></div>
+                        <h3 class="program-title fade-in-up">MMA (Tentative)</h3>
+                    </div>
+                    <div class="program-content">
+                        <p>Blend striking, wrestling, and jiu-jitsu. Our new mixed martial arts program focuses on bringing all the ranges of combat together.</p>
+                        <a href="#schedule" class="program-link">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section schedule-section">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Class Schedule</h2>
+                <p class="section-subtitle">Consistent training is the key to progress. Find a class time that fits your life.</p>
+            </div>
+            
+            <div class="container animate-on-scroll">
+                <h3 class="studio-title">Main Studio <span class="text-secondary text-sm font-normal">(Front Room)</span></h3>
+                <div class="schedule-table-wrapper mb-8">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Sat/Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Morning<br><span class="text-xs text-secondary">10:00 AM - 12:30 PM</span></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td><span class="badge badge-muay mb-2">Sun: 10a Beg. Muay Thai</span><br><span class="badge badge-muay mb-2">Sun: 11:30a Muay Thai</span><br><span class="badge badge-bjj">Sat: 10a Comp Class</span><br><span class="badge badge-bjj mt-2">Sat: 11a Open Mat</span></td>
+                            </tr>
+                            <tr>
+                                <td>Afternoon<br><span class="text-xs text-secondary">4:30 PM - 5:15 PM</span></td>
+                                <td><span class="badge badge-kids">Pee Wee Jiu Jitsu</span></td>
+                                <td><span class="badge badge-kids">5pm Youth Muay Thai</span><br><span class="badge badge-fma mt-2">5pm Youth Wrestling</span></td>
+                                <td><span class="badge badge-kids">Pee Wee Jiu Jitsu</span></td>
+                                <td><span class="badge badge-kids">4:30p Peewee NOGI</span><br><span class="badge badge-kids mt-2">5pm Youth Muay Thai</span><br><span class="badge badge-fma mt-2">5:15p Youth Wrestling</span></td>
+                                <td><span class="badge badge-kids">5pm Jr/Teens NOGI</span></td>
+                                <td class="empty-cell"></td>
+                            </tr>
+                            <tr>
+                                <td>Early Evening<br><span class="text-xs text-secondary">5:15 PM - 6:15 PM</span></td>
+                                <td><span class="badge badge-kids">Jr/Teens Jiu Jitsu</span></td>
+                                <td><span class="badge badge-muay">6pm Adult Muay Thai</span><br><span class="badge badge-bjj mt-2">6:15p Beg. Jiu Jitsu</span></td>
+                                <td><span class="badge badge-kids">Jr/Teens Jiu Jitsu</span></td>
+                                <td><span class="badge badge-muay">6pm Adult Muay Thai</span><br><span class="badge badge-bjj mt-2">6:15p Beg. Jiu Jitsu</span></td>
+                                <td><span class="badge badge-bjj">6pm Adult Open Mat</span><br><span class="badge badge-mma mt-2">6pm MMA (Tentative)</span></td>
+                                <td class="empty-cell"></td>
+                            </tr>
+                            <tr>
+                                <td>Evening<br><span class="text-xs text-secondary">6:00 PM - 8:00 PM</span></td>
+                                <td><span class="badge badge-bjj">6pm Adult Jiu Jitsu</span><br><span class="badge badge-fma mt-2">6:30p Adv. Balintawak</span><br><span class="badge badge-fma mt-2">7:15p Beg. Balintawak</span></td>
+                                <td class="empty-cell"></td>
+                                <td><span class="badge badge-bjj">6pm Adult Jiu Jitsu</span><br><span class="badge badge-fma mt-2">6:30p Adv. Balintawak</span><br><span class="badge badge-fma mt-2">7:15p Beg. Balintawak</span></td>
+                                <td><span class="badge badge-muay">7pm Beg. Muay Thai</span></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="studio-title mt-8">Secondary Studio <span class="text-secondary text-sm font-normal">(Back Room)</span></h3>
+                <div class="schedule-table-wrapper mb-8">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Sat/Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Afternoon<br><span class="text-xs text-secondary">4:30 PM - 5:15 PM</span></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                                <td><span class="badge badge-kids">4:30p Peewee NOGI</span></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                            </tr>
+                            <tr>
+                                <td>Early Evening<br><span class="text-xs text-secondary">5:00 PM - 6:15 PM</span></td>
+                                <td class="empty-cell"></td>
+                                <td><span class="badge badge-fma">5pm Youth Wrestling</span></td>
+                                <td class="empty-cell"></td>
+                                <td><span class="badge badge-fma">5:15p Youth Wrestling</span></td>
+                                <td class="empty-cell"></td>
+                                <td class="empty-cell"></td>
+                            </tr>
+                            <tr>
+                                <td>Evening<br><span class="text-xs text-secondary">6:00 PM - 8:00 PM</span></td>
+                                <td><span class="badge badge-fma">6:30p Adv. Balintawak</span><br><span class="badge badge-fma mt-2">7:15p Beg. Balintawak</span></td>
+                                <td><span class="badge badge-bjj">6:15p Beg. Jiu Jitsu</span></td>
+                                <td><span class="badge badge-fma">6:30p Adv. Balintawak</span><br><span class="badge badge-fma mt-2">7:15p Beg. Balintawak</span></td>
+                                <td><span class="badge badge-bjj">6:15p Beg. Jiu Jitsu</span><br><span class="badge badge-muay mt-2">7pm Beg. Muay Thai</span></td>
+                                <td><span class="badge badge-bjj">6pm Adult Open Mat</span></td>
+                                <td><span class="badge badge-bjj">Sat: 11a Open Mat</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="text-center mt-8 inline-block w-full">
+                    <p class="text-secondary mb-4">* Schedule is subject to change. Please contact us to confirm your introductory class time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Your First Week</h2>
+                <p class="section-subtitle">Starting martial arts can be intimidating. We make the on-ramp frictionless.</p>
+            </div>
+            
+            <div class="steps-grid container">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Book Introduction</h3>
+                    <p>Schedule a quick tour and intro session so you know exactly what to expect before you ever step on the mat.</p>
+                </div>
+                <div class="step-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Try a Class</h3>
+                    <p>Jump into a beginner-friendly class. No gear? No problem. We've got loaner gear waiting for you.</p>
+                </div>
+                <div class="step-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Choose Your Path</h3>
+                    <p>If you love it (and you will), we'll help you pick a membership that fits your goals and schedule.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instructors Section -->
+        <section id="instructors" class="section instructors-section" style="background-color: var(--color-bg-dark);">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Meet The Team</h2>
+                <p class="section-subtitle">Learn from experienced practitioners dedicated to your growth.</p>
+            </div>
+            
+            <div class="container instructors-grid animate-on-scroll">
+                <!-- Instructor 1 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Professor Arthur Ruff</h3>
+                    <p class="instructor-title">Head Professor / Black Belt</p>
+                    <p class="instructor-bio">Born in Rio de Janeiro, Arthur started Judo at four, then began Jiu Jitsu at 13 under legend Manimal (Carlson Gracie Sr. lineage). He's a multi-champion competitor who founded Ruffhouse in 1999.</p>
+                </div>
+
+                <!-- Instructor 2 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Andrew Ruff</h3>
+                    <p class="instructor-title">Instructor / Black Belt</p>
+                    <p class="instructor-bio">Andrew began his Brazilian Jiu-Jitsu journey in his teens at Manimal Jiu-Jitsu. He served nearly 23 years in the US Army as a Combat Medic, dedicating his life to leadership, service, and performing under pressure.</p>
+                </div>
+
+                <!-- Instructor 3 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Raul Tabile</h3>
+                    <p class="instructor-title">Instructor / Balintawak</p>
+                    <p class="instructor-bio">A Level 6 practitioner in GM Bobby Taboada's Balintawak System under Guro John Soriano. He's passionate about spreading Filipino culture through martial arts.</p>
+                </div>
+
+                <!-- Instructor 4 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Francisco</h3>
+                    <p class="instructor-title">Instructor / Black Belt</p>
+                    <p class="instructor-bio">Earning his black belt in 2023, Francisco has trained since 2006. He also holds a 4th degree black belt in Taekwondo and actively trains in Muay Thai.</p>
+                </div>
+
+                <!-- Instructor 5 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Matt & Charlie</h3>
+                    <p class="instructor-title">Instructors / Muay Thai</p>
+                    <p class="instructor-bio">Matt started training under CSW in '07 and leads the Muay Thai program. Charlie is an active Muay Thai fighter aiming for the pros, bringing extensive wrestling experience.</p>
+                </div>
+                
+                <!-- Instructor 6 -->
+                <div class="instructor-card">
+                    <h3 class="instructor-name">Nate, Phi, Cholson & John</h3>
+                    <p class="instructor-title">Instructors / Grappling</p>
+                    <p class="instructor-bio">Our dedicated team of specialized BJJ and Wrestling coaches covering morning classes, beginners, teens, and youth programs to ensure everyone gets the attention they need.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section reviews-section">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Don't Take Our Word For It</h2>
+                <p class="section-subtitle">Hear from the community that makes Ruffhouse Renton special.</p>
+            </div>
+
+            <div class="reviews-grid container">
+                <div class="review-card animate-on-scroll">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The instruction here is top-tier. I came in with zero experience and felt welcomed immediately. The upper belts are super helpful and ego truly is checked at the door."</p>
+                    <p class="review-author">- Sarah M.</p>
+                </div>
+                <div class="review-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"My kids have been training here for two years and their confidence has skyrocketed. The coaches are incredible with the children. Best investment in their future."</p>
+                    <p class="review-author">- James T.</p>
+                </div>
+                <div class="review-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Tried the Muay Thai trial class on a whim and was hooked. Incredible workout, real technique, and an amazing group of people pushing each other."</p>
+                    <p class="review-author">- Michael D.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section blog-section" style="background-color: var(--color-bg-dark);">
+            <div class="container section-header animate-on-scroll">
+                <h2 class="section-title">Latest from the Mats</h2>
+                <p class="section-subtitle">Techniques, mindset, and news from Ruffhouse Renton.</p>
+            </div>
+            
+            <div class="container blog-grid animate-on-scroll">
+                <!-- Blog Post 1 -->
+                <a href="https://www.ruffhouserenton.com/blog/how-to-improve-your-submission-game" target="_blank" class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Recent</span>
+                        <h3 class="blog-title">How to Improve Your Submission Game</h3>
+                        <p class="blog-excerpt">Read our latest breakdown on sharpening your finishing mechanics and increasing your submission rate.</p>
+                        <span class="blog-read-more">Read Article <span class="arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- Blog Post 2 -->
+                <a href="https://www.ruffhouserenton.com/blog/how-martial-arts-became-a-lifestyle-not-just-a-sport" target="_blank" class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Recent</span>
+                        <h3 class="blog-title">How Martial Arts Became a Lifestyle, Not Just a Sport</h3>
+                        <p class="blog-excerpt">Explore how training on the mats transforms into discipline and growth in every aspect of life.</p>
+                        <span class="blog-read-more">Read Article <span class="arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- Blog Post 3 -->
+                <a href="https://www.ruffhouserenton.com/blog/why-ground-control-often-decides-the-fight" target="_blank" class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-date">Recent</span>
+                        <h3 class="blog-title">Why Ground Control Often Decides the Fight</h3>
+                        <p class="blog-excerpt">A deep dive into the importance of positional dominance and why controlling the ground is essential.</p>
+                        <span class="blog-read-more">Read Article <span class="arrow">→</span></span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://www.ruffhouserenton.com/blog" target="_blank" class="btn btn-outline">View All Articles</a>
+            </div>
+        </section>
+
+        <!-- Contact / Lead Capture Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container contact-container animate-on-scroll">
+                <div class="contact-info">
+                    <h2 class="section-title text-left">Start Your Journey</h2>
+                    <p class="section-subtitle text-left mb-6">Take the first step towards your goals. Fill out the form to claim your free introductory class and gym tour.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <h3>Location</h3>
+                            <p>405 S. 3rd St.<br>Renton, WA 98057</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Contact</h3>
+                            <p>425-572-5454<br>info@ruffhouserenton.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="lead-form" id="leadForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="program">Program of Interest</label>
+                            <select id="program" required>
+                                <option value="" disabled selected>Select a Program...</option>
+                                <option value="bjj">Adult BJJ</option>
+                                <option value="muay-thai">Muay Thai</option>
+                                <option value="balintawak">Balintawak</option>
+                                <option value="kids">Kids & Teens</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large w-full mt-4">Claim Free Trial</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="brand-logo mb-4">RUFFHOUSE <span>RENTON</span></div>
+            <p class="text-secondary footer-desc">Renton's premier destination for World-Class BJJ and Striking.</p>
+            <div class="footer-links mt-4">
+                <a href="#programs">Programs</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            <p class="text-xs text-secondary mt-8">© 2026 Ruffhouse Renton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
