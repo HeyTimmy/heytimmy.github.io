@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', toggleMenu);
     });
 
+    const leadForm = document.getElementById('leadForm');
+    if (leadForm) {
+        // Formspree handles the submission, so we just let the default action proceed.
+        // We can optionally add our own custom success message logic here later
+        // by listening for the "submit" event and making an AJAX call instead.
+    }
+
     // --- Intersection Observer for Scroll Animations ---
     const observerOptions = {
         root: null,

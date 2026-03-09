@@ -463,18 +463,21 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <form class="lead-form" id="leadForm">
+                    <!-- Formspree Integration -->
+                    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xbjnqvyv" method="POST">
+                        <input type="hidden" name="_to" value="tbrowne1026@gmail.com">
+                        <input type="hidden" name="_replyto" value="%email%">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" required placeholder="John Doe">
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" required placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" required placeholder="(555) 123-4567">
+                            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
                         </div>
                         <div class="form-group">
                             <label for="program">Program of Interest</label>
