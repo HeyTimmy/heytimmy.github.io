@@ -463,10 +463,10 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <!-- Formspree Integration -->
-                    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xbjnqvyv" method="POST">
-                        <input type="hidden" name="_to" value="tbrowne1026@gmail.com">
-                        <input type="hidden" name="_replyto" value="%email%">
+                    <!-- FormSubmit Integration -->
+                    <form class="lead-form" id="leadForm" action="https://formsubmit.co/tbrowne1026@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Free Trial Lead from Ruffhouse Website!">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -481,7 +481,7 @@
                         </div>
                         <div class="form-group">
                             <label for="program">Program of Interest</label>
-                            <select id="program" required>
+                            <select id="program" name="program" required>
                                 <option value="" disabled selected>Select a Program...</option>
                                 <option value="bjj">Adult BJJ</option>
                                 <option value="muay-thai">Muay Thai</option>
