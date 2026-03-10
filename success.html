@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success | Ruffhouse Renton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 2rem;
+        }
+        .success-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 4rem 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+        }
+        .success-card h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .success-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+        .btn-home {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-home:hover {
+            background-color: #d11025;
+            transform: translateY(-2px);
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="success-card">
+        <h1>Awesome! You're in.</h1>
+        <p>Thanks for reaching out! Professor Arthur or someone from the Ruffhouse team will personally reach out to you shortly to get your free trial scheduled.</p>
+        <p>We can't wait to see you on the mats.</p>
+        <a href="index.html" class="btn-home">Return to Site</a>
+    </div>
+</body>
+</html>
