@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Network | Ruffhouse Renton</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .affiliates-header {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background-color: var(--color-bg-dark);
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .affiliates-header h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+        .affiliates-header p {
+            color: var(--color-text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .affiliates-container {
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .affiliate-card {
+            background-color: var(--color-bg-light);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .affiliate-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .affiliate-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--color-primary);
+            background-color: #050505;
+            padding: 5px;
+        }
+
+        .affiliate-name {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .affiliate-location {
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .affiliate-desc {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+        
+        .affiliate-link {
+            display: inline-block;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .affiliate-link:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">RUFFHOUSE <span>RENTON</span></a>
+            <div class="nav-links">
+                <a href="index.html#programs">Programs</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="events.html">Events</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="index.html#reviews">Reviews</a>
+            </div>
+            <a href="index.html#contact" class="nav-cta btn btn-primary">Free Trial</a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="index.html#programs" class="mobile-link">Programs</a>
+            <a href="events.html" class="mobile-link">Events</a>
+            <a href="affiliates.html" class="mobile-link">Affiliates</a>
+            <a href="index.html#blog" class="mobile-link">Blog</a>
+            <a href="index.html#contact" class="mobile-link btn btn-primary mt-4 text-center">Free Trial</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="affiliates-header">
+        <div class="container">
+            <h1>Our Network</h1>
+            <p>The Ruffhouse Association and our extended Carlson Gracie Team family. Train worldwide.</p>
+        </div>
+    </header>
+
+    <!-- Affiliates Grid -->
+    <main class="affiliates-container">
+        <div class="affiliate-grid">
+            
+            <!-- Ruffhouse Columbus -->
+            <div class="affiliate-card">
+                <img src="https://ui-avatars.com/api/?name=RC&size=300&background=111&color=e50914&font-size=0.4" alt="Ruffhouse Columbus Logo" class="affiliate-logo">
+                <h3 class="affiliate-name">Ruffhouse Columbus</h3>
+                <span class="affiliate-location"><i class="fas fa-map-marker-alt"></i> Columbus, OH</span>
+                <p class="affiliate-desc">Led by Head Coach Chris Larkin. Offering premium Brazilian Jiu-Jitsu, No-Gi Grappling, and high-level wrestling programs.</p>
+                <a href="#" class="affiliate-link">Visit Website</a>
+            </div>
+
+            <!-- Ruffhouse Shelton -->
+            <div class="affiliate-card">
+                <img src="https://ui-avatars.com/api/?name=RS&size=300&background=111&color=e50914&font-size=0.4" alt="Ruffhouse Shelton Logo" class="affiliate-logo">
+                <h3 class="affiliate-name">Ruffhouse Shelton</h3>
+                <span class="affiliate-location"><i class="fas fa-map-marker-alt"></i> Shelton, WA</span>
+                <p class="affiliate-desc">A cornerstone of our Pacific Northwest network, bringing the Ruffhouse Association standards to the greater Shelton area.</p>
+                <a href="#" class="affiliate-link">Visit Website</a>
+            </div>
+
+            <!-- Carlson Gracie Ireland -->
+            <div class="affiliate-card">
+                <img src="https://ui-avatars.com/api/?name=CGI&size=300&background=111&color=fff&font-size=0.35" alt="Carlson Gracie Ireland Logo" class="affiliate-logo" style="border-color: white;">
+                <h3 class="affiliate-name">Carlson Gracie Ireland</h3>
+                <span class="affiliate-location"><i class="fas fa-globe-europe"></i> Ireland</span>
+                <p class="affiliate-desc">Our international Carlson Gracie family branch. Carrying on the legendary "Smash and Pass" legacy across the Atlantic.</p>
+                <a href="#" class="affiliate-link">Visit Website</a>
+            </div>
+
+            <!-- Identity Jiu-Jitsu -->
+            <div class="affiliate-card">
+                <img src="https://ui-avatars.com/api/?name=ID&size=300&background=222&color=ccc&font-size=0.4" alt="Identity Jiu-Jitsu Logo" class="affiliate-logo" style="border-color: #555;">
+                <h3 class="affiliate-name">Identity Jiu-Jitsu</h3>
+                <span class="affiliate-location"><i class="fas fa-handshake"></i> Cross-Training Partner</span>
+                <p class="affiliate-desc">Led by Professor Phi Nguyen. A premier academy and close developmental partner with Ruffhouse for cross-training and seminars.</p>
+                <a href="#" class="affiliate-link">Visit Website</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
+        <div class="container footer-content">
+            <div class="brand-logo mb-4" style="font-size: 2rem;">RUFFHOUSE <span>RENTON</span></div>
+            <p class="text-secondary footer-desc max-w-md mx-auto mb-6">Renton's premier destination for World-Class BJJ and Striking.</p>
+            
+            <div class="social-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/ruffhouserenton/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RuffhouseRenton/" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.yelp.com/biz/ruffhouse-renton" target="_blank" aria-label="Yelp" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-yelp"></i></a>
+                <a href="https://www.google.com/search?q=Ruffhouse+Renton" target="_blank" aria-label="Google Business" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-google"></i></a>
+            </div>
+
+            <p class="text-xs text-secondary mt-8" style="opacity: 0.5;">© 2026 Ruffhouse Renton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Desktop Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            // Animate hamburger lines naturally handled by CSS class toggle
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
