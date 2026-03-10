@@ -1,42 +1,87 @@
-# Ruffhouse Renton Website Negotiation Pitch
+# Ruffhouse Renton Executive Pitch Deck & Playbook
 
-**Goal:** Use the high-value website asset you've built to negotiate a reduction or complete waiver of your $185/mo (+4% fee) tuition.
-
-### The Leverage You Have
-1. **The Cost of Web Development:** A custom, conversion-optimized landing page like this from a digital marketing agency would cost between **$2,500 to $5,000** upfront, plus $100-$300/mo for maintenance and hosting.
-2. **The Cost of Acquiring a Customer (CAC):** If they run ads, getting a lead can cost $30-$50. A website that converts a higher percentage of their organic Instagram/Facebook traffic is incredibly valuable. If this site brings in just 2 new students a month that the old site would have lost, it pays for your tuition tenfold.
-3. **The Immediate Value:** You already did the work. You aren't pitching an idea; you are handing them a completed, working machine.
+**Target:** Professor Arthur Ruff (Owner)
+**Goal:** Present the new website as an automated sales machine, pitch a modernized "All-In" premium pricing model, and negotiate a performance-based partnership for managing the digital funnel.
 
 ---
 
-### Step-by-Step Approach
+## Slide 1: The Vision – From Local Gym to Global Alliance
 
-**1. The Setup (Don't pitch over text)**
-"Professor / Andrew, do you guys have 10 minutes to chat after class on [Day]? I’ve been working on a project for the gym on my own time and I want to show it to you."
+*   **The Mission:** Elevate Ruffhouse Renton to the #1 "Go-To" academy in King County.
+*   **The Problem:** We have "Legacy Pricing" in a "Premium Market." We haven't adjusted for inflation in 7 years, and the 4% credit card surcharge is a known conversion killer.
+*   **The Solution:** A high-converting digital funnel (heytimmy.com) paired with a "Passport" membership model that actively monetizes the global Ruffhouse network (Columbus, Ireland, Shelton) and our Identity affiliation.
 
-**2. The Presentation (Focus on THEIR pain points)**
-*Sit them down and use the `owner_presentation.html` you generated, or just pull up the new `index.html` on a tablet/laptop.*
+---
 
-> "I noticed we've been pushing hard on social media to get new students, which is awesome. Andrew, I know you've been working on getting the word out. 
->
-> The problem is, when people click our link, our current Squarespace site is pretty outdated and making it hard for people to figure out how to actually sign up. We're probably losing people who actually want to train here.
->
-> I do this kind of stuff for a living, so I went ahead and built a brand-new, modern landing page for Ruffhouse. It’s designed specifically as a 'sales funnel' to turn Instagram views into actual bodies on the mats."
+## Slide 2: The Market Reality (Seattle 2026)
 
-*(Scroll through the site. Point out the real photos, the easy 'How It Works' section, and the un-gated schedule.)*
+*   **The Competition:**
+    *   Gracie Barra Kirkland: $200+ (Plus mandatory $180 Gi fee)
+    *   Seattle BJJ: $175 (Limited classes)
+*   **The Economic Reality:** CPI inflation is 2.4%. Social Security adjusted 2.8%. Since 2019, inflation has devalued our current rates by nearly 20%.
+*   **The Pivot:** We must transition from "Cheap & Friction-heavy" (base rate + 4% fee) to "Premium & Seamless." 
 
-**3. The Pitch (The Ask)**
-> "I want you guys to have this. Normally, a digital marketing agency would charge around $3,000 to $4,000 to build a custom conversion funnel like this, plus a monthly retainer to keep it running. 
-> 
-> I don't want to charge you guys that. Ruffhouse is my gym. Since I'd also be the one maintaining it, updating the schedule when Joe, Tyler, or I fill in, and making sure the lead form goes straight to your phones... 
->
-> What I'd love to propose is an even trade: I hand over the site, handle the hosting, and manage updates for you guys going forward, and in exchange, we comp my $185 monthly tuition. You get a professional web presence that will easily convert enough new students to cover that cost, and I get to contribute my professional skills to the gym's growth."
+---
 
-### Handling Objections
+## Slide 3: The New Pricing Architecture
 
-*   **"We don't really have a budget for this right now."**
-    *   *Rebuttal:* "That's exactly why I'm proposing a trade. There is zero out-of-pocket cash cost to you today. You just waive my monthly fee, and the site goes live tomorrow."
-*   **"Can we just do half-off tuition?"**
-    *   *Rebuttal:* (If you are willing to negotiate): "I'm willing to meet you at half-off ($90/mo) if we cover *just* the site handover, but for full maintenance, SEO, and updating the schedule/instructor list whenever needed, a full comp makes it an even trade for my time."
-*   **"We like our Squarespace site."**
-    *   *Rebuttal:* "I totally respect that, it got the gym this far. But look at the lead form on this new one. It's frictionless. Let's A/B test it. Let's run this one for a month, and if it doesn't bring in more leads than the old site, we can always switch back."
+We are establishing High-Performance Academy status to match the Carlson Gracie lineage.
+
+1.  **The Tripwire (Lead Magnet): $99 / 30-Day Trial**
+    *   High volume, low risk. Includes a rental Gi. Designed purely to collect their contact info and get them on the mats.
+2.  **The Foundation: $215/mo**
+    *   Unlimited Renton access. *All-in pricing. No hidden fees.*
+3.  **The Squad: $175/mo (per person)**
+    *   The "Buddy System" rate (requires 2+ signups). This is the volume engine that guarantees high retention.
+4.  **The Global Passport: $275/mo**
+    *   Unlimited Renton + Unlimited Identity (Phi) + Global Drop-ins (Columbus, Ireland, Shelton).
+    *   *The Logic:* The existence of a $275 tier justifies the $215 rate, making the standard rate look like a bargain.
+
+---
+
+## Slide 4: The Sales Funnel (HeyTimmy.com Demo)
+
+*Demonstrate the site on your phone or laptop.*
+
+*   **Zero Friction Booking:** The site captures the lead (Email/Phone) immediately on the $99 Trial. No "Contact Us for Pricing" friction.
+*   **Mobile Speed:** Lightning-fast load times. The schedule and "Call" button are built for users on the go.
+*   **Lineage as Luxury:** Highlight the "About Us" section detailing the Carlson Gracie lineage. It immediately establishes authority (E-E-A-T) and trust to justify the new $215 pricing.
+*   **Automated Conversion:** Tell Arthur: "On Day 25 of their $99 trial, the system emails them: *'Love the mats? Sign for a year today and we'll waive your $199 enrollment fee.'* The website closes the deal so you can focus on the mats."
+
+---
+
+## Slide 5: Protecting the Legacy (Culture First)
+
+*   **Open Gear Policy:** Unlike Gracie Barra, we allow any uniform and patches. This is a $200 savings for every new member on Day 1. It keeps our "Fighter's Gym" edge.
+*   **The COLA Clause:** All new contracts have a built-in 3% Annual Cost of Living Adjustment. We grow with the economy automatically, meaning we never have to do a "Big Price Hike" again.
+*   **Grandfathering:** We lock the current "Day 1s" into their current rate for 12 months. We protect the loyalty that built this place while shifting new growth to higher margins.
+
+---
+
+## Slide 6: The "Win-Win" Partnership
+
+*   **The Proposal:** Don't ask for a salary. Pitch a performance-based Growth Share model.
+*   **Your Role:** You manage the tech, the SEO, the automated email/text funnels, and generate the leads through the site.
+*   **The Commission:** You receive the **Enrollment Fee ($199)** as a Marketing & Acquisition Commission for every new member you bring in and close through the website.
+*   **The Bottom Line:** Arthur keeps 100% of the newly increased Monthly Recurring Revenue (MRR). You only get paid when the gym grows.
+
+---
+
+## Appendix: The "Premium" Punch List ($2k Refresh)
+
+If you are going to charge $215/mo, the physical space must match the digital promise. 
+
+*   **The First Impression Fixes:**
+    *   **Paint:** Satin Gray/Navy (Easier to clean, modern look). -> *$400 - $800*
+    *   **Ceiling:** Replace/Patch water-stained tiles. -> *$300 - $600*
+    *   **Lighting:** Swap flickering lights for 4000K LED Panels (Daylight feel). -> *$200 - $400*
+*   **Bathroom Hospitality Suite:**
+    *   High-Efficiency Commercial Toilet. -> *$500 - $800*
+    *   Defense Soap/Tea Tree dispensers + High-end air freshener. 
+    *   "Hot Towel Cabby" on the counter with clean, rolled white hand towels.
+*   **The ROI Math:** Total refresh cost is ~$2,500. We only need 12 new students paying the $199 enrollment fee to cover the entire renovation.
+
+---
+
+**Closing Tip for the Meeting:**
+*"Professor, that 4% makes us look like a gas station. At $215 'All-In,' we look like the Carlson Gracie black belts we are. Let's trade the 'icky' fee for a 'Premium' status and let the website do the selling."*
