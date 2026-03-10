@@ -25,15 +25,32 @@
 
 ## Slide 3: The New Pricing Architecture
 
-We are establishing High-Performance Academy status to match the Carlson Gracie lineage.
+### The 2026 Shift (Pricing Strategy)
+The current rates ($145-$165) are bleeding money to inflation. Top-tier Eastside gyms are charging $200-$250+.
+However, we also need to be brutally honest: **We cannot charge $250/mo right now because the physical facility does not match that price point.** 
 
-1.  **The Tripwire (Lead Magnet): $99 / 30-Day Trial**
-    *   High volume, low risk. Includes a rental Gi. Designed purely to collect their contact info and get them on the mats.
-2.  **The Foundation: $215/mo**
-    *   Unlimited Renton access. *All-in pricing. No hidden fees.*
-3.  **The Squad: $175/mo (per person)**
-    *   The "Buddy System" rate (requires 2+ signups). This is the volume engine that guarantees high retention.
-4.  **The Global Passport: $275/mo**
+Our strategy is to position Ruffhouse at a **Mid-High Premium Tier ($195/mo)**. This respects the elite Carlson Gracie lineage and striking instruction, but acknowledges we don't have a pristine, million-dollar mega-gym.
+
+We institute a 3-tier system:
+1.  **The Foundation ($195/mo, 12-Month):** The new standard. Replaces the $145 rate.
+2.  **The Squad ($165/mo per person, 12-Month):** Replaces the archaic 10% family discount. Drives high-value, multi-member signups.
+3.  **The Nomad ($225/mo, Month-to-Month):** An intentionally painful price tag. If they refuse a contract, they pay for the privilege of flexibility.
+4. **The Annual Paid-In-Full ($2,000/yr):** This is our strategic cash injector. It saves the student money, but gives the gym a massive upfront influx of cash. 
+
+**The Facility Improvement Plan (The Pitch):**
+*If we sell just THREE Paid-In-Full memberships, we immediately generate $6,000 in cash.*
+We ring-fence this money strictly for facility upgrades:
+- Professional deep cleaning of the entire facility.
+- Fresh interior paint to match the new dynamic branding.
+- Ceiling and lighting repairs.
+- A complete bathroom overhaul (replacing the toilet, fixing fixtures).
+
+This proves to Arthur that raising prices isn't just about padding the bottom line; it's the direct mechanism to fund the improvements the gym desperately needs to attract higher-paying clientele.
+
+### The Value-Adds (Justifying the $195)
+We aren't just raising the price; we are increasing the *perceived value*:
+*   **Unlimited Renton access.** *All-in pricing. No hidden fees.*
+*   **The Global Passport: $275/mo**
     *   Unlimited Renton + Unlimited Identity (Phi) + Global Drop-ins (Columbus, Ireland, Shelton).
     *   *The Logic:* The existence of a $275 tier justifies the $215 rate, making the standard rate look like a bargain.
 

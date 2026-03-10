@@ -18,8 +18,8 @@ Here is exactly how you handle that presentation.
 ---
 
 ### Step 2: The "Future Expansion" Pitch (Iteration 2)
-**What it is:** The premium expansion. It proves you are thinking about the *business* (Events, Seminars, Kicksite CRM, Annual Paid-in-Full cash flow).
-**Where it lives:** Right here on your Desktop in the `RUFFHOUSE` folder (`file:///Users/tim.v.browne/Desktop/RUFFHOUSE/index.html`).
+**What it is:** The premium expansion. It proves you are thinking about the *business* (Events, Seminars, Kicksite CRM, Annual Paid-in-Full cash flow). **Crucially, this version is NOT live on the internet yet.** It is built purely as a private prototype for this meeting.
+**Where it lives:** Right here on your Desktop in the `RUFFHOUSE` folder (`file:///Users/tim.v.browne/Desktop/RUFFHOUSE/index.html`). 
 
 **How to present it:**
 1. Once Arthur is impressed with V1 on his phone, open your laptop where you have the local files.

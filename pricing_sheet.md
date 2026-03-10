@@ -15,7 +15,7 @@ We don't hide our prices. We don't force you into "proprietary" $200 Gis. We jus
 
 | Feature | The Foundation | The Squad (Buddy) | The Nomad | The Passport |
 | :--- | :--- | :--- | :--- | :--- |
-| **Monthly Rate** | **$215** | **$175 (per person)** | **$265** | **$275** |
+| **Monthly Rate** | **$195** | **$175 (per person)** | **$225** | **$275** |
 | **Paid in Full (Annual)** | **$2,150** *(Save $430)* | **$1,750** *(Save $350)* | N/A | **$2,750** *(Save $550)* |
 | **Commitment** | 12 Months | 12 Months | Month-to-Month | 12 Months |
 | **Enrollment** | $199 | $149 | $299 | $199 |
