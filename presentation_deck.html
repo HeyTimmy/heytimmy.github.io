@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffhouse Executive Pitch Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Presentation Layout */
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 10%;
+            position: relative;
+            border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+        }
+        
+        .slide:nth-child(even) {
+            background-color: #0a0a0a;
+        }
+        
+        /* Typography Highlights */
+        .slide-number {
+            position: absolute;
+            top: 2rem;
+            right: 10%;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .deck-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .deck-subtitle {
+            font-size: 1.8rem;
+            color: var(--color-primary); /* Ruffhouse Red */
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+        }
+        
+        .slide-heading {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            border-left: 6px solid var(--color-primary);
+            padding-left: 1.5rem;
+        }
+        
+        .slide-content li {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #cccccc;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .slide-content li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: white;
+            font-weight: 800;
+            background-color: rgba(229, 9, 20, 0.15);
+            padding: 0 0.2rem;
+        }
+        
+        /* Pricing Table Styling (Overriding default styles.css for presentation) */
+        .pricing-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+        
+        .presentation-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.2rem;
+            background: rgba(20, 20, 20, 0.5);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .presentation-table th {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            border-right: 1px solid rgba(0,0,0,0.2);
+        }
+        
+        .presentation-table td {
+            padding: 1.5rem;
+            color: #e0e0e0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-right: 1px solid rgba(255,255,255,0.02);
+        }
+        
+        .presentation-table td:first-child {
+            font-weight: 800;
+            color: white;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .price-big {
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            display: block;
+        }
+        
+        .save-text {
+            color: #00bf63; /* Green for savings */
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            border-top: 1px solid rgba(229, 9, 20, 0.3);
+        }
+        
+        .nav-btn {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        .accent-box {
+            background: rgba(229, 9, 20, 0.1);
+            border: 1px solid var(--color-primary);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1: Title -->
+    <div class="slide" id="slide-1">
+        <div class="slide-number">01</div>
+        <div class="deck-subtitle">Executive Strategy Proposal</div>
+        <h1 class="deck-title">Ruffhouse Renton <br><span style="color: var(--color-primary);">2026 Initiative</span></h1>
+        <div class="slide-content" style="margin-top: 2rem;">
+            <p style="font-size: 1.5rem; color: #aaa; max-width: 800px; line-height: 1.6;">
+                Transitioning from "Legacy Pricing" to a "High-Performance Academy" model. Capturing the Seattle market, eliminating conversion friction, and automating our sales funnel.
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Market Reality -->
+    <div class="slide" id="slide-2">
+        <div class="slide-number">02</div>
+        <h2 class="slide-heading">The Market Reality</h2>
+        <ul class="slide-content">
+            <li><span class="highlight">The Competition:</span> Premium Eastside/Seattle academies (Gracie Barra Kirkland, Seattle BJJ) are charging <strong>$175 - $200+</strong> per month, frequently with mandatory gear fees.</li>
+            <li><span class="highlight">The Inflation Hit:</span> Since 2019, inflation has devalued our unadjusted rates by nearly 20%. CPI sits at 2.4%; the Social Security COLA was 2.8%.</li>
+            <li><span class="highlight">The Friction Point:</span> Our 4% credit card surcharge is a proven conversion killer. Buyers perceive it as a "hidden tax" rather than the cost of business.</li>
+            <li><span class="highlight">The Pivot:</span> Move from "cheap base + fees" to a <strong>Premium, All-In standard</strong> that reflects the Carlson Gracie lineage.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 3: The Pricing Architecture -->
+    <div class="slide" id="slide-3">
+        <div class="slide-number">03</div>
+        <h2 class="slide-heading">The New Pricing Architecture</h2>
+        
+        <div class="pricing-table-container">
+            <table class="presentation-table">
+                <thead>
+                    <tr>
+                        <th>Tier</th>
+                        <th>The Foundation</th>
+                        <th>The Squad (Buddy)</th>
+                        <th>The Passport</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly Rate</td>
+                        <td><span class="price-big">$215</span></td>
+                        <td><span class="price-big">$175</span> <span style="font-size:1rem; opacity:0.7;">per person</span></td>
+                        <td><span class="price-big">$275</span></td>
+                    </tr>
+                    <tr>
+                        <td>Paid in Full (Annual)</td>
+                        <td>$2,150 <br><span class="save-text">Save $430 (2 mos free)</span></td>
+                        <td>$1,750 <br><span class="save-text">Save $350 (2 mos free)</span></td>
+                        <td>$2,750 <br><span class="save-text">Save $550 (2 mos free)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Enrollment Fee</td>
+                        <td>$199</td>
+                        <td>$149</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr>
+                        <td>Access Level</td>
+                        <td>Unlimited Renton</td>
+                        <td>Unlimited Renton</td>
+                        <td>Renton, Identity, + Global Affiliates</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="accent-box">
+            <h3 style="color: white; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">The "Pay In Full" Advantage</h3>
+            <p style="color: #ccc; font-size: 1.2rem; line-height: 1.5;">By offering a 2-months-free <strong>Annual Paid-In-Full</strong> discount, we generate massive immediate cash flow to fund gym improvements ($2,150+ drops at once), while completely bypassing credit card monthly processing fees and eliminating cancellation risk for 12 months.</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: The Sales Machine -->
+    <div class="slide" id="slide-4">
+        <div class="slide-number">04</div>
+        <h2 class="slide-heading">The Sales Automation</h2>
+        <ul class="slide-content">
+            <li><span class="highlight">The $99 Tripwire:</span> 30 days unlimited. High volume, low risk. Gets bodies on the mats with zero sales pressure.</li>
+            <li><span class="highlight">HeyTimmy.com Demo:</span> The new digital funnel captures leads immediately, without the friction of "Contact Us for Pricing."</li>
+            <li><span class="highlight">The Automated Close:</span> On Day 25 of the trial, the website auto-emails the student: <em>"Sign for a year today and we'll waive your $199 enrollment fee."</em> The website does the selling so instructors can focus on training.</li>
+        </ul>
+    </div>
+
+    <!-- Slide 5: The Partnership -->
+    <div class="slide" id="slide-5">
+        <div class="slide-number">05</div>
+        <h2 class="slide-heading">The Win-Win Partnership</h2>
+        <ul class="slide-content">
+            <li><span class="highlight">No Salary Ask:</span> I manage the technology, the SEO, the automated funnel, and the website's performance completely on a <strong>Growth Share</strong> model.</li>
+            <li><span class="highlight">The Commission Structure:</span> I receive the <strong>Enrollment Fee ($199)</strong> as a marketing commission for every new member closed via the digital funnel.</li>
+            <li><span class="highlight">The Mutual Benefit:</span> The gym keeps 100% of the newly increased Monthly Recurring Revenue (MRR). The upfront cash flow from Annual PIF signups funds facility upgrades. We both win immediately.</li>
+        </ul>
+        
+        <div style="margin-top: 4rem;">
+            <a href="index.html" class="btn btn-primary" style="font-size: 1.5rem; padding: 1rem 3rem;">View Live Website Demo</a>
+        </div>
+    </div>
+
+    <div class="cta-bar">
+        <button class="nav-btn" onclick="scrollSlide(-1)">← Previous</button>
+        <div style="font-weight: 800; letter-spacing: 2px;">RUFFHOUSE RENTON</div>
+        <button class="nav-btn" onclick="scrollSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function scrollSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 1) currentSlide = 1;
+            if (currentSlide > totalSlides) currentSlide = totalSlides;
+            
+            document.getElementById('slide-' + currentSlide).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Listen for keyboard arrows
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') scrollSlide(1);
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') scrollSlide(-1);
+        });
+    </script>
+</body>
+</html>

@@ -779,15 +779,16 @@ ul {
 
 .schedule-table th,
 .schedule-table td {
-    padding: 1.25rem 0.5rem;
+    padding: 1rem 0.4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.02);
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .schedule-table th:first-child,
 .schedule-table td:first-child {
     width: 12%;
+    vertical-align: middle;
 }
 
 .schedule-table th {
@@ -810,14 +811,31 @@ ul {
 }
 
 .badge {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.4rem;
     border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.72rem;
+    font-weight: 800;
     text-transform: uppercase;
     color: white;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.2;
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.badge:last-child {
+    margin-bottom: 0 !important;
+}
+
+.schedule-table td .badge + br {
+    display: none;
 }
 
 .badge-bjj { background-color: #1f51ff; } /* Deep Blue */
