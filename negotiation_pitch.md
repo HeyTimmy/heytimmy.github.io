@@ -102,8 +102,8 @@ We aren't just raising the price; we are increasing the *perceived value*:
 
 *   **The Proposal:** Don't ask for a salary. Pitch a performance-based Growth Share model.
 *   **Your Role:** You manage the tech, the SEO, the automated email/text funnels, and generate the leads through the site.
-*   **The Commission:** You receive the **Enrollment Fee ($199)** as a Marketing & Acquisition Commission for every new member you bring in and close through the website.
-*   **The Bottom Line:** Arthur keeps 100% of the newly increased Monthly Recurring Revenue (MRR). You only get paid when the gym grows.
+*   **The Commission:** You receive a strict **$195 Marketing Commission** for every new member you bring in and close through the website. Since your current rate is $192.40 ($185+4%), generating just 12 net-new students over the year mathematically pays for your membership. This ensures you never lower Arthur's average membership value per student.
+*   **The Bottom Line:** Arthur keeps 100% of the newly increased Monthly Recurring Revenue (MRR) starting in month two. You only get paid when the gym grows, and anything beyond 12 students is pure mutual profit.
 
 ---
 
