@@ -628,6 +628,25 @@ ul {
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.02);
     box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.instructor-read-more {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.instructor-card:hover .instructor-read-more {
+    color: white;
 }
 
 .instructor-name {
