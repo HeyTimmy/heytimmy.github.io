@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
         .blog-header {
@@ -140,11 +142,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-12 py-8 text-center bg-gray-900 border-t border-gray-800">
+    <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
         <div class="container footer-content">
-            <div class="brand-logo mb-4 text-white font-black text-2xl tracking-tighter">RUFFHOUSE <span class="text-red-600">RENTON</span></div>
-            <p class="text-gray-400 footer-desc max-w-md mx-auto mb-4">Renton's premier destination for World-Class BJJ and Striking.</p>
-            <p class="text-xs text-gray-500 mt-8">© 2026 Ruffhouse Renton. All rights reserved.</p>
+            <div class="brand-logo mb-4" style="font-size: 2rem;">RUFFHOUSE <span>RENTON</span></div>
+            <p class="text-secondary footer-desc max-w-md mx-auto mb-6">Renton's premier destination for World-Class BJJ and Striking.</p>
+            
+            <div class="social-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/ruffhouserenton/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RuffhouseRenton/" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.yelp.com/biz/ruffhouse-jiu-jitsu-renton" target="_blank" aria-label="Yelp" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-yelp"></i></a>
+                <a href="https://www.google.com/search?q=Ruffhouse+Renton" target="_blank" aria-label="Google Business" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-google"></i></a>
+            </div>
+
+            <p class="text-xs text-secondary mt-8" style="opacity: 0.5;">© 2026 Ruffhouse Renton. All rights reserved.</p>
         </div>
     </footer>
 </body>
