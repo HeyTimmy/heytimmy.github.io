@@ -463,8 +463,9 @@
                 </div>
 
                 <div class="contact-form-wrapper">
-                    <!-- MailTo Demo Fallback -->
-                    <form class="lead-form" id="leadForm" action="mailto:tbrowne1026@gmail.com?subject=New%20Free%20Trial%20Lead" method="POST" enctype="text/plain">
+                    <!-- Formspree Integration -->
+                    <form class="lead-form" id="leadForm" action="https://formspree.io/f/xgonalez" method="POST">
+                        <input type="hidden" name="_replyto" value="%email%">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
