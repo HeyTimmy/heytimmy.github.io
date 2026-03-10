@@ -168,6 +168,106 @@
             line-height: 1.5;
         }
 
+        /* Modal Styles */
+        .event-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .event-modal.active {
+            display: flex;
+        }
+        .event-modal-content {
+            background-color: var(--color-bg-base);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .close-modal:hover {
+            color: var(--color-primary);
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+        .modal-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--color-primary);
+            background-color: #222;
+        }
+        .modal-title-wrapper h3 {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        .modal-date {
+            color: var(--color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        .modal-body {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        .clickable-card {
+            cursor: pointer;
+            position: relative;
+        }
+        .clickable-card::after {
+            content: 'Read More →';
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .clickable-card:hover::after {
+            opacity: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -233,55 +333,71 @@
         <h3 class="past-events-title">Past Seminars & Clinics</h3>
         
         <div class="past-events-grid">
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('December 2025', 'Master Saohin Srisuk', 'Former PABA boxing champion and Muay Thai veteran led a masterful seminar focusing on Thai striking, elite footwork, and fight strategy. This 3-hour immersive clinic broke down the mechanics of power generation, Dutch block counters, and the psychological warfare of the clinch. Master Saohin shared drilling techniques straight from the elite camps in Thailand.', 'https://ui-avatars.com/api/?name=Saohin+Srisuk&size=300&background=111&color=e50914')">
                 <span class="past-event-date">December 2025</span>
                 <h4 class="past-event-instructor">Master Saohin Srisuk</h4>
                 <p class="past-event-desc">Former PABA boxing champion and Muay Thai veteran led a masterful seminar focusing on Thai striking, elite footwork, and fight strategy.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('December 2025', 'Prof. Emily Rosalynn Nicholson', 'IBJJF World Masters & Asian Open Champion broke down her high-level techniques, strategy, and competition mindset for both kids and adults. Professor Emily focused heavily on modern guard retention, grip fighting matrices, and how to seamlessly transition between submissions without losing dominant control.', 'https://ui-avatars.com/api/?name=Emily+Rosalynn&size=300&background=111&color=e50914')">
                 <span class="past-event-date">December 2025</span>
-                <h4 class="past-event-instructor">Prof. Emily Rosalynn Nicholson</h4>
+                <h4 class="past-event-instructor">Prof. Emily Nicholson</h4>
                 <p class="past-event-desc">IBJJF World Masters & Asian Open Champion broke down her high-level techniques, strategy, and competition mindset for both kids and adults.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('October 2025', 'Professor Chris Larkin', 'Head of Ruffhouse Columbus visited Renton for a deep dive into No-Gi leg locks, heel hook defense, and wrestling transitions for BJJ. The seminar explored systematic entries to the legs from open guard and modern defensive concepts to keep the knees safe during high-level competition rolling.', 'https://ui-avatars.com/api/?name=Chris+Larkin&size=300&background=111&color=e50914')">
                 <span class="past-event-date">October 2025</span>
                 <h4 class="past-event-instructor">Professor Chris Larkin</h4>
                 <p class="past-event-desc">Head of Ruffhouse Columbus visited Renton for a deep dive into No-Gi leg locks, heel hook defense, and wrestling transitions for BJJ.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('August 2025', 'Professor Phi Nguyen', 'A special cross-training clinic bridging Ruffhouse and Identity Jiu-Jitsu. Professor Phi broke down his infamous spider/lasso guard systems. He detailed the critical tension required to execute unbalancing sweeps and how to immediately capitalize on exposing the opponent’s back from bottom positions.', 'https://ui-avatars.com/api/?name=Phi+Nguyen&size=300&background=111&color=e50914')">
                 <span class="past-event-date">August 2025</span>
                 <h4 class="past-event-instructor">Professor Phi Nguyen</h4>
                 <p class="past-event-desc">A special cross-training clinic bridging Ruffhouse and Identity Jiu-Jitsu. Professor Phi broke down his infamous spider/lasso guard systems.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('May 2025', 'Professor Clark Gracie', 'The legendary Omoplata master visited Ruffhouse to share his world-renowned submissions, grip-breaking details, and dynamic guard attacks. Students spent hours drilling the exact mechanic details that made Professor Clark one of the most feared submission artists in the middleweight division.', 'https://ui-avatars.com/api/?name=Clark+Gracie&size=300&background=111&color=e50914')">
                 <span class="past-event-date">May 2025</span>
                 <h4 class="past-event-instructor">Professor Clark Gracie</h4>
                 <p class="past-event-desc">The legendary Omoplata master visited Ruffhouse to share his world-renowned submissions, grip-breaking details, and dynamic guard attacks.</p>
             </div>
 
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('February 2025', 'Professor Arthur Ruff', 'The annual Ruffhouse Association Summit. A 4-hour immersive review of the core Carlson Gracie self-defense and Smash & Pass philosophy. Professor Arthur ensured that the fundamental pressure-passing system that built the team’s legacy was perfected by every student in the room.', 'https://ui-avatars.com/api/?name=Arthur+Ruff&size=300&background=111&color=e50914')">
                 <span class="past-event-date">February 2025</span>
                 <h4 class="past-event-instructor">Professor Arthur Ruff</h4>
                 <p class="past-event-desc">The annual Ruffhouse Association Summit. A 4-hour immersive review of the core Carlson Gracie self-defense and "Smash & Pass" philosophy.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('December 2022', 'Prof. Rodrigo Medeiros', 'A monumental day for the academy. Professor Medeiros led a packed master class that culminated in Professor Arthur Ruff being awarded his 5th Degree Black Belt. The seminar covered high-level strategic concepts for longevity in the sport and brutal, old-school closed guard attacks.', 'https://ui-avatars.com/api/?name=Rodrigo+Medeiros&size=300&background=111&color=e50914')">
                 <span class="past-event-date">December 2022</span>
                 <h4 class="past-event-instructor">Prof. Rodrigo Medeiros</h4>
                 <p class="past-event-desc">A monumental day for the academy. Professor Medeiros led a packed master class that culminated in Professor Arthur Ruff being awarded his 5th Degree Black Belt.</p>
             </div>
             
-            <div class="past-event-card">
+            <div class="past-event-card clickable-card" onclick="openModal('December 2021', 'Kru Mark Beecher', 'World-renowned Muay Thai coach and former champion brought his intense striking clinic to Renton, focusing on Dutch combinations and Thai clinching. The workshop leveled up the striking fundamentals of our fight team, specifically focusing on cage control and elbow range.', 'https://ui-avatars.com/api/?name=Mark+Beecher&size=300&background=111&color=e50914')">
                 <span class="past-event-date">December 2021</span>
                 <h4 class="past-event-instructor">Kru Mark "Hyena" Beecher</h4>
                 <p class="past-event-desc">World-renowned Muay Thai coach and former champion brought his intense striking clinic to Renton, focusing on Dutch combinations and Thai clinching.</p>
             </div>
         </div>
     </main>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="event-modal">
+        <div class="event-modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <img id="modalImg" class="modal-img" src="" alt="Instructor">
+                <div class="modal-title-wrapper">
+                    <span id="modalDate" class="modal-date"></span>
+                    <h3 id="modalTitle"></h3>
+                </div>
+            </div>
+            <div id="modalDesc" class="modal-body">
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
@@ -299,5 +415,27 @@
             <p class="text-xs text-secondary mt-8" style="opacity: 0.5;">© 2026 Ruffhouse Renton. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        function openModal(date, title, desc, imgUrl) {
+            document.getElementById('modalDate').innerText = date;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalImg').src = imgUrl;
+            document.getElementById('eventModal').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() {
+            document.getElementById('eventModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('eventModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
