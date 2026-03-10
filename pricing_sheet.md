@@ -13,7 +13,7 @@
 **Step 2: Choose Your Path**
 We don't hide our prices. We don't force you into "proprietary" $200 Gis. We just train.
 
-| Feature | The Passport | The Nomad | The Foundation | The Squad (Buddy) | The Executive (4 Classes/Month) |
+| Feature | The Passport | The Nomad | The Foundation | The Squad (Buddy) | The Executive (Masters 30+, 4x/Mo) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Monthly Rate** | **$275** | **$225** | **$195** | **$175 (per person)** | **$100** |
 | **Paid in Full (Annual)** | **$3,025** *(1 Mo Free + Waived Init.)* | N/A | **$2,145** *(1 Mo Free + Waived Init.)* | **$1,925** *(1 Mo Free + Waived Init.)* | N/A |

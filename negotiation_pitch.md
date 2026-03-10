@@ -33,7 +33,7 @@ Our strategy is to position Ruffhouse at a **Mid-High Premium Tier ($195/mo)**. 
 
 We institute a 3-tier system:
 1.  **$195/mo The Foundation (Unlimited):** This is the new baseline. It’s a necessary correction. We cannot provide a premium service (and fund a premium facility) on budget pricing.
-2.  **$100/mo The Executive (4 Classes/Month):** A low-barrier entry point designed specifically to catch tire-kickers, busy professionals, and older demographics who can't commit to a full schedule but want to train.
+2.  **$100/mo The Executive (Masters 30+, 4x/Mo):** A restricted entry point specifically for the "Masters" demographic. We strictly age-gate this so younger adults/kids don't abuse the discount, allowing us to still catch the tired parents and busy professionals who want to train but can't commit to a $195 unlimited schedule.
 3.  **$2,000/yr Paid-In-Full:** This is not a discount; it is a **funding mechanism**. Every PIF sold goes directly onto the "Punch List" (paint, ceiling tiles, new toilet, deep cleaning). This allows us to improve the gym *without* taking out a loan.
 4.  **$5/mo ACH Discount:** Encourages direct bank transfers, bypassing credit card processing fees and stabilizing revenue.
 
