@@ -37,9 +37,23 @@ We are establishing High-Performance Academy status to match the Carlson Gracie 
     *   Unlimited Renton + Unlimited Identity (Phi) + Global Drop-ins (Columbus, Ireland, Shelton).
     *   *The Logic:* The existence of a $275 tier justifies the $215 rate, making the standard rate look like a bargain.
 
+*   *Note: All tiers are subject to a $5/mo discount if the student sets up direct ACH Bank Transfer, effectively eliminating our credit card processing fees.*
+
 ---
 
-## Slide 4: The Sales Funnel (HeyTimmy.com Demo)
+## Slide 4: The Tech Stack (Kicksite CRM Integration)
+
+*   **The Current Gap:** Right now, leads might get lost in an email inbox or require manual data entry.
+*   **The Solution:** The new `heytimmy.com` funnel natively integrates with Kicksite's **Web-to-Lead** functionality.
+*   **How It Works:** 
+    1. A visitor fills out the $99 Trial form on the website.
+    2. The data is securely transmitted directly into your Kicksite dashboard.
+    3. Kicksite automatically triggers the digital waiver sequence and the "Welcome to the Gauntlet" SMS/Email flow.
+*   **The Result:** Zero manual data entry for the manager. Lead capture and follow-up are 100% automated.
+
+---
+
+## Slide 5: The Sales Funnel (HeyTimmy.com Demo)
 
 *Demonstrate the site on your phone or laptop.*
 
@@ -79,6 +93,13 @@ If you are going to charge $215/mo, the physical space must match the digital pr
     *   High-Efficiency Commercial Toilet. -> *$500 - $800*
     *   Defense Soap/Tea Tree dispensers + High-end air freshener. 
     *   "Hot Towel Cabby" on the counter with clean, rolled white hand towels.
+
+### The "Annual Seminar Pass" (Optional Upsell)
+To further capitalize on the Global Affiliates and Arthur's network, we can offer an **Annual Seminar Pass for $250/year**.
+*   Instead of charging $65-$80 piecemeal every time a Black Belt visits, students pay once.
+*   Generates immediate, non-refundable cash flow.
+*   Guarantees attendance at seminars, making the mats look packed when affiliates visit.
+
 *   **The ROI Math:** Total refresh cost is ~$2,500. We only need 12 new students paying the $199 enrollment fee to cover the entire renovation.
 
 ---

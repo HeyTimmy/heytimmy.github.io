@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminars & Events | Ruffhouse Renton</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .events-header {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background-color: var(--color-bg-dark);
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .events-header h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+        .events-header p {
+            color: var(--color-text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .events-container {
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Upcoming Event Highlight */
+        .upcoming-event {
+            background: linear-gradient(to right, rgba(229, 9, 20, 0.1), rgba(0, 0, 0, 0.8));
+            border: 1px solid var(--color-primary);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .upcoming-badge {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background-color: var(--color-primary);
+            color: white;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(229, 9, 20, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+        }
+
+        .upcoming-event h2 {
+            font-size: 2.5rem;
+            color: white;
+            line-height: 1.1;
+        }
+
+        .event-details {
+            display: flex;
+            gap: 2rem;
+            color: #ccc;
+            font-size: 1.1rem;
+            flex-wrap: wrap;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-detail i {
+            color: var(--color-primary);
+        }
+
+        .event-pricing {
+            background: rgba(0,0,0,0.5);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--color-primary);
+            margin-top: 1rem;
+        }
+        
+        .price-tier {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .price-tier.passport {
+            color: var(--color-primary);
+        }
+
+        /* Past Events Grid */
+        .past-events-title {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .past-events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .past-event-card {
+            background-color: var(--color-bg-card);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .past-event-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .past-event-date {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .past-event-instructor {
+            font-size: 1.4rem;
+            color: white;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .past-event-desc {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar" style="background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px);">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">RUFFHOUSE <span>RENTON</span></a>
+            <div class="nav-links">
+                <a href="index.html#programs">Programs</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="events.html">Events</a>
+                <a href="index.html#blog">Blog</a>
+            </div>
+            <a href="index.html#contact" class="nav-cta btn btn-primary">Free Trial</a>
+        </div>
+    </nav>
+
+    <header class="events-header">
+        <div class="container">
+            <h1>Seminars & Events</h1>
+            <p>Elevate your game by learning from world-class instructors. Check back regularly for upcoming workshops and academy events.</p>
+        </div>
+    </header>
+
+    <main class="events-container">
+        <!-- Upcoming Event -->
+        <div class="upcoming-event">
+            <div class="upcoming-badge">New Event</div>
+            
+            <h2>Master Class: Pressure Passing & Guard Retention with Prof. Rodrigo Medeiros</h2>
+            
+            <p style="color: #eee; font-size: 1.1rem; line-height: 1.6; max-width: 800px;">
+                Join us for an exclusive 3-hour seminar with BJJ legend and Carlson Gracie black belt, Professor Rodrigo Medeiros. This clinic will focus heavily on old-school pressure passing concepts and modern guard retention mechanics that work at the highest levels of competition.
+            </p>
+            
+            <div class="event-details">
+                <div class="event-detail"><strong>Date:</strong> Saturday, May 16th, 2026</div>
+                <div class="event-detail"><strong>Time:</strong> 12:00 PM - 3:00 PM</div>
+                <div class="event-detail"><strong>Location:</strong> Ruffhouse Renton Main Studio</div>
+            </div>
+            
+            <div class="event-pricing">
+                <div class="price-tier passport">
+                    <span>Passport Members (All-Access)</span>
+                    <span>FREE</span>
+                </div>
+                <div class="price-tier">
+                    <span>Foundation & Squad Members</span>
+                    <span>$65</span>
+                </div>
+                <div class="price-tier" style="margin-bottom: 0;">
+                    <span>Non-Members / Drop-ins</span>
+                    <span>$100</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <a href="#register" class="btn btn-primary">Lock In Your Spot</a>
+            </div>
+        </div>
+
+        <!-- Past Events -->
+        <h3 class="past-events-title">Past Seminars & Clinics</h3>
+        
+        <div class="past-events-grid">
+            <div class="past-event-card">
+                <span class="past-event-date">October 2025</span>
+                <h4 class="past-event-instructor">Professor Chris Larkin</h4>
+                <p class="past-event-desc">Head of Ruffhouse Columbus visited Renton for a deep dive into No-Gi leg locks, heel hook defense, and wrestling transitions for BJJ.</p>
+            </div>
+            
+            <div class="past-event-card">
+                <span class="past-event-date">August 2025</span>
+                <h4 class="past-event-instructor">Professor Phi Nguyen</h4>
+                <p class="past-event-desc">A special cross-training clinic bridging Ruffhouse and Identity Jiu-Jitsu. Professor Phi broke down his infamous spider/lasso guard systems.</p>
+            </div>
+            
+            <div class="past-event-card">
+                <span class="past-event-date">May 2025</span>
+                <h4 class="past-event-instructor">Professor Arthur Ruff</h4>
+                <p class="past-event-desc">The annual Ruffhouse Association Summit. A 4-hour immersive review of the core Carlson Gracie self-defense and "Smash & Pass" philosophy.</p>
+            </div>
+            
+            <div class="past-event-card">
+                <span class="past-event-date">February 2025</span>
+                <h4 class="past-event-instructor">Coach Francisco Rivera</h4>
+                <p class="past-event-desc">Ruffhouse Shelton's head instructor led a packed room through advanced butterfly guard and sweeping mechanics for all belt levels.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
+        <div class="container footer-content">
+            <div class="brand-logo mb-4" style="font-size: 2rem;">RUFFHOUSE <span>RENTON</span></div>
+            <p class="text-secondary footer-desc max-w-md mx-auto mb-6">Renton's premier destination for World-Class BJJ and Striking.</p>
+            
+            <div class="social-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/ruffhouserenton/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RuffhouseRenton/" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.yelp.com/biz/ruffhouse-jiu-jitsu-renton" target="_blank" aria-label="Yelp" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-yelp"></i></a>
+            </div>
+
+            <p class="text-xs text-secondary mt-8" style="opacity: 0.5;">© 2026 Ruffhouse Renton. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
