@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffhouse Admin | Blog Generator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .admin-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #111;
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(229, 9, 20, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .admin-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .admin-header h1 {
+            font-size: 2.5rem;
+            color: white;
+            text-transform: uppercase;
+        }
+        .admin-header p {
+            color: var(--color-primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #ccc;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background-color: #222;
+            border: 1px solid #333;
+            color: white;
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        textarea.form-control {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .drop-zone {
+            width: 100%;
+            padding: 2rem;
+            border: 2px dashed #444;
+            border-radius: var(--radius);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #1a1a1a;
+            position: relative;
+        }
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: var(--color-primary);
+            background-color: rgba(229, 9, 20, 0.05);
+        }
+        .drop-zone p {
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .drop-zone input {
+            display: none;
+        }
+        .preview-image {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: var(--radius);
+            display: none;
+            margin: 0 auto;
+        }
+
+        .btn-generate {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .instructions {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--color-primary);
+        }
+        .instructions h3 {
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        .instructions p {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <p>Ruffhouse Association</p>
+            <h1>Blog Generator</h1>
+        </div>
+
+        <div class="instructions">
+            <h3>How to publish:</h3>
+            <p>1. Fill out this form and drop your image.<br>
+            2. Click <strong>Generate Blog Post</strong>.<br>
+            3. Move the downloaded <code>.html</code> file into your <strong>RUFFHOUSE</strong> folder.<br>
+            4. Open <strong>GitHub Desktop</strong>, type "New Post", and hit the blue <strong>Commit and Push</strong> button.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="postTitle">Blog Post Title</label>
+            <input type="text" id="postTitle" class="form-control" placeholder="e.g., The Importance of Tapping Early" required>
+        </div>
+
+        <div class="form-group">
+            <label for="postAuthor">Author Name</label>
+            <input type="text" id="postAuthor" class="form-control" placeholder="e.g., Prof. Arthur Ruff" value="Prof. Arthur Ruff" required>
+        </div>
+
+        <div class="form-group">
+            <label for="postDate">Date (will auto-fill to today if left blank)</label>
+            <input type="text" id="postDate" class="form-control" placeholder="e.g., March 15, 2026">
+        </div>
+
+        <div class="form-group">
+            <label>Cover Image (Required)</label>
+            <div class="drop-zone" id="dropZone">
+                <p id="dropText">Drag & Drop an image here, or click to browse.</p>
+                <img id="imagePreview" class="preview-image" src="" alt="Preview">
+                <input type="file" id="imageInput" accept="image/png, image/jpeg, image/webp">
+            </div>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">Note: The image will be embedded directly into the file. Keep files under 1MB if possible.</p>
+        </div>
+
+        <div class="form-group">
+            <label for="postContent">Blog Content (Paragraphs)</label>
+            <textarea id="postContent" class="form-control" placeholder="Write your blog post here. Use enter for new paragraphs." required></textarea>
+        </div>
+
+        <button id="generateBtn" class="btn btn-primary btn-generate">Generate Blog Post</button>
+    </div>
+
+    <script>
+        // --- Image Drag & Drop Logic ---
+        const dropZone = document.getElementById('dropZone');
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const dropText = document.getElementById('dropText');
+        let base64Image = '';
+
+        dropZone.addEventListener('click', () => imageInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                imageInput.files = e.dataTransfer.files;
+                processImage(imageInput.files[0]);
+            }
+        });
+
+        imageInput.addEventListener('change', function() {
+            if (this.files.length) {
+                processImage(this.files[0]);
+            }
+        });
+
+        function processImage(file) {
+            if (!file.type.match('image.*')) {
+                alert("Please select an image file.");
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                base64Image = e.target.result;
+                imagePreview.src = base64Image;
+                imagePreview.style.display = 'block';
+                dropText.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // --- HTML Generator Logic ---
+        document.getElementById('generateBtn').addEventListener('click', () => {
+            const title = document.getElementById('postTitle').value;
+            const author = document.getElementById('postAuthor').value;
+            let date = document.getElementById('postDate').value;
+            const rawContent = document.getElementById('postContent').value;
+
+            if (!title || !author || !rawContent || !base64Image) {
+                alert("Please fill out all fields and provide an image.");
+                return;
+            }
+
+            if (!date) {
+                const now = new Date();
+                date = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+
+            // Convert raw text into HTML paragraphs
+            const paragraphs = rawContent.split('\n').filter(p => p.trim() !== '').map(p => `<p class="blog-text">${p.trim()}</p>`).join('\n                ');
+
+            // Generate URL slug
+            const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+            const filename = `blog-${slug}.html`;
+
+            // The gigantic HTML template backtick string bridging V1 global styles
+            const htmlTemplate = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} | Ruffhouse Renton Blog</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: var(--color-bg-dark);">
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">RUFFHOUSE <span>RENTON</span></a>
+            <div class="nav-links">
+                <a href="index.html#programs">Programs</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="events.html">Events</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="index.html#reviews">Reviews</a>
+            </div>
+            <a href="index.html#contact" class="nav-cta btn btn-primary">Free Trial</a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-links">
+            <a href="index.html#programs" class="mobile-link">Programs</a>
+            <a href="index.html#schedule" class="mobile-link">Schedule</a>
+            <a href="events.html" class="mobile-link">Events</a>
+            <a href="affiliates.html" class="mobile-link">Affiliates</a>
+            <a href="index.html#blog" class="mobile-link">Blog</a>
+            <a href="index.html#reviews" class="mobile-link">Reviews</a>
+            <a href="index.html#contact" class="mobile-link btn btn-primary mt-4 text-center">Free Trial</a>
+        </div>
+    </div>
+
+    <!-- Blog Header -->
+    <header class="blog-post-header" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(10,10,10,1)), url('\${base64Image}');">
+        <div class="container text-center">
+            <h1 class="blog-post-title">${title}</h1>
+            <p class="blog-post-meta">By ${author} | ${date}</p>
+        </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="container py-12">
+        <div class="blog-post-content" style="max-width: 800px; margin: 0 auto; padding: 2rem; background-color: var(--color-bg-base); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.05);">
+            <img src="\${base64Image}" alt="Blog Image" style="width: 100%; border-radius: var(--radius); margin-bottom: 2rem; border: 2px solid #333;">
+            
+            <div style="font-size: 1.15rem; line-height: 1.8; color: #ddd;">
+                ${paragraphs}
+            </div>
+            
+            <div class="mt-12 text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                <p style="margin-bottom: 1.5rem; font-weight: 600;">Want to learn these techniques on the mat?</p>
+                <a href="index.html#contact" class="btn btn-primary btn-large">Claim Your Free Trial</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
+        <div class="container footer-content">
+            <div class="brand-logo mb-4" style="font-size: 2rem;">RUFFHOUSE <span>RENTON</span></div>
+            <p class="text-secondary footer-desc max-w-md mx-auto mb-6">Renton's premier destination for World-Class BJJ and Striking.</p>
+            
+            <div class="social-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="https://www.instagram.com/ruffhouserenton/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RuffhouseRenton/" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.yelp.com/biz/ruffhouse-renton" target="_blank" aria-label="Yelp" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-yelp"></i></a>
+                <a href="https://www.google.com/search?q=Ruffhouse+Renton" target="_blank" aria-label="Google Business" style="color: white; font-size: 1.8rem; transition: color 0.3s ease;" onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='white'"><i class="fab fa-google"></i></a>
+            </div>
+
+            <p class="text-xs text-secondary mt-8" style="opacity: 0.5;">© 2026 Ruffhouse Renton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>`;
+
+            // Note: In the template above, we must escape the template literal interpolation for the base64Image
+            // to prevent the generator from executing it during the string creation, but we actually WANT the 
+            // literal value injected into the final string, so the injection was done via string replacement or direct injection. Let's fix the syntax.
+            // Replace \${base64Image} with actual var
+            const finalHtml = htmlTemplate.replace(/\$\{base64Image\}/g, base64Image);
+
+            // Trigger file download
+            const blob = new Blob([finalHtml], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = filename;
+            
+            document.body.appendChild(a);
+            a.click();
+            
+            // Cleanup
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+            
+            alert(`Success! Check your Downloads folder for '${filename}'. Simply drag it into the RUFFHOUSE folder and push via GitHub Desktop.`);
+        });
+    </script>
+
+</body>
+</html>
