@@ -12,6 +12,103 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Instructor Modal Styles */
+        .instructor-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .instructor-modal.active {
+            display: flex;
+        }
+        .instructor-modal-content {
+            background-color: var(--color-bg-base);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+        .close-instructor-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .close-instructor-modal:hover {
+            color: var(--color-primary);
+        }
+        .instructor-modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+        .instructor-modal-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--color-primary);
+            background-color: #222;
+        }
+        .instructor-modal-title-wrapper h3 {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        .instructor-modal-title {
+            color: var(--color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        .instructor-modal-body {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        .clickable-card {
+            cursor: pointer;
+            position: relative;
+        }
+        .clickable-card::after {
+            content: 'Read More →';
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .clickable-card:hover::after {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -339,43 +436,50 @@
             
             <div class="container instructors-grid animate-on-scroll">
                 <!-- Instructor 1 -->
-                <div class="instructor-card">
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Professor Arthur Ruff', 'Head Professor / 5th Degree Black Belt', 'Born in Rio de Janeiro, Arthur started Judo at four, then began Jiu Jitsu at 13 under legend Manimal (Carlson Gracie Sr. lineage). He is a multi-champion competitor who founded Ruffhouse in 1999 and continues to lead the association from Renton.', 'https://placehold.co/300x300/111111/e50914.png?text=AR')">
                     <h3 class="instructor-name">Professor Arthur Ruff</h3>
                     <p class="instructor-title">Head Professor / Black Belt</p>
                     <p class="instructor-bio">Born in Rio de Janeiro, Arthur started Judo at four, then began Jiu Jitsu at 13 under legend Manimal (Carlson Gracie Sr. lineage). He's a multi-champion competitor who founded Ruffhouse in 1999.</p>
                 </div>
 
                 <!-- Instructor 2 -->
-                <div class="instructor-card">
-                    <h3 class="instructor-name">Andrew Ruff</h3>
-                    <p class="instructor-title">Instructor / Black Belt</p>
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Professor Andrew Ruff', 'Professor / Black Belt', 'Andrew began his Brazilian Jiu-Jitsu journey in his teens at Manimal Jiu-Jitsu in Rio. A true warrior who served nearly 23 years in the US Army as a Combat Medic, Andrew brings decades of leadership, resilience, and unshakeable technique to the mats.', 'https://placehold.co/300x300/111111/e50914.png?text=AN')">
+                    <h3 class="instructor-name">Professor Andrew Ruff</h3>
+                    <p class="instructor-title">Professor / Black Belt</p>
                     <p class="instructor-bio">Andrew began his Brazilian Jiu-Jitsu journey in his teens at Manimal Jiu-Jitsu. He served nearly 23 years in the US Army as a Combat Medic, dedicating his life to leadership, service, and performing under pressure.</p>
                 </div>
 
                 <!-- Instructor 3 -->
-                <div class="instructor-card">
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Coach Raul Tabile', 'Instructor / Balintawak', 'A Level 6 practitioner in GM Bobby Taboada\'s Balintawak System under Guro John Soriano. Coach Raul is deeply passionate about spreading Filipino culture through martial arts and teaching highly effective close-quarters weapon defense.', 'https://placehold.co/300x300/111111/e50914.png?text=RT')">
                     <h3 class="instructor-name">Raul Tabile</h3>
                     <p class="instructor-title">Instructor / Balintawak</p>
                     <p class="instructor-bio">A Level 6 practitioner in GM Bobby Taboada's Balintawak System under Guro John Soriano. He's passionate about spreading Filipino culture through martial arts.</p>
                 </div>
 
                 <!-- Instructor 4 -->
-                <div class="instructor-card">
-                    <h3 class="instructor-name">Francisco</h3>
-                    <p class="instructor-title">Instructor / Black Belt</p>
-                    <p class="instructor-bio">Earning his black belt in 2023, Francisco has trained since 2006. He also holds a 4th degree black belt in Taekwondo and actively trains in Muay Thai.</p>
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Professor Francisco Rivera', 'Professor / Black Belt', 'Earning his black belt from Professor Arthur in 2021, Francisco has been training relentlessly since 2006. He also holds a 4th degree black belt in Taekwondo and actively trains in Muay Thai, making him a highly technical and well-rounded coach.', 'https://placehold.co/300x300/111111/e50914.png?text=FR')">
+                    <h3 class="instructor-name">Professor Francisco</h3>
+                    <p class="instructor-title">Professor / Black Belt</p>
+                    <p class="instructor-bio">Earning his black belt in 2021, Francisco has trained since 2006. He also holds a 4th degree black belt in Taekwondo and actively trains in Muay Thai.</p>
                 </div>
 
                 <!-- Instructor 5 -->
-                <div class="instructor-card">
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Coach Brandon Vallin', 'Instructor / Brown Belt', 'Coach Brandon brings high-level technical precision and a deep passion for the sport. A dedicated Brown Belt under Professor Arthur, Brandon is a staple on the mats and a key figure in developing our students\' fundamental and advanced guards.', 'https://placehold.co/300x300/111111/e50914.png?text=BV')">
+                    <h3 class="instructor-name">Brandon Vallin</h3>
+                    <p class="instructor-title">Instructor / Brown Belt</p>
+                    <p class="instructor-bio">A dedicated Brown Belt under Professor Arthur, Brandon brings high-level technical precision and is a key figure in developing our students' BJJ fundamentals.</p>
+                </div>
+
+                <!-- Instructor 6 -->
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('Coach Matt & Coach Charlie', 'Instructors / Muay Thai', 'Coach Matt started training under the CSW system in 2007 and leads the academy\'s Muay Thai curriculum. Coach Charlie is an active Muay Thai competitor aiming for the pros, bringing extensive collegiate wrestling experience and relentless cardio to the striking program.', 'https://placehold.co/300x300/111111/e50914.png?text=MC')">
                     <h3 class="instructor-name">Matt & Charlie</h3>
                     <p class="instructor-title">Instructors / Muay Thai</p>
                     <p class="instructor-bio">Matt started training under CSW in '07 and leads the Muay Thai program. Charlie is an active Muay Thai fighter aiming for the pros, bringing extensive wrestling experience.</p>
                 </div>
                 
-                <!-- Instructor 6 -->
-                <div class="instructor-card">
-                    <h3 class="instructor-name">Nate, Phi, Cholson & John</h3>
+                <!-- Instructor 7 -->
+                <div class="instructor-card clickable-card" onclick="openInstructorModal('The Assistant Coaches', 'Instructors / Grappling', 'Our dedicated team of specialized BJJ and Wrestling coaches—including Nate, Phi, Cholson, John, Tim, and Tyler. They cover the early morning classes, beginner fundamentals, teens, and youth programs, ensuring every student on the mat gets the hands-on attention they need to succeed.', 'https://placehold.co/300x300/111111/e50914.png?text=AC')">
+                    <h3 class="instructor-name">Nate, Phi, Cholson, John, Tim & Tyler</h3>
                     <p class="instructor-title">Instructors / Grappling</p>
                     <p class="instructor-bio">Our dedicated team of specialized BJJ and Wrestling coaches covering morning classes, beginners, teens, and youth programs to ensure everyone gets the attention they need.</p>
                 </div>
@@ -503,6 +607,44 @@
             </div>
         </section>
     </main>
+
+    <!-- Instructor Modal -->
+    <div id="instructorModal" class="instructor-modal">
+        <div class="instructor-modal-content">
+            <span class="close-instructor-modal" onclick="closeInstructorModal()">&times;</span>
+            <div class="instructor-modal-header">
+                <img id="modalInstImg" class="instructor-modal-img" src="" alt="Instructor">
+                <div class="instructor-modal-title-wrapper">
+                    <span id="modalInstTitle" class="instructor-modal-title"></span>
+                    <h3 id="modalInstName"></h3>
+                </div>
+            </div>
+            <div id="modalInstDesc" class="instructor-modal-body">
+            </div>
+        </div>
+    </div>
+    <script>
+        function openInstructorModal(name, title, desc, imgUrl) {
+            document.getElementById('modalInstTitle').innerText = title;
+            document.getElementById('modalInstName').innerText = name;
+            document.getElementById('modalInstDesc').innerText = desc;
+            document.getElementById('modalInstImg').src = imgUrl;
+            document.getElementById('instructorModal').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeInstructorModal() {
+            document.getElementById('instructorModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('instructorModal');
+            if (event.target == modal) {
+                closeInstructorModal();
+            }
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer section py-12 text-center" style="background-color: #050505; border-top: 1px solid rgba(229, 9, 20, 0.2);">
