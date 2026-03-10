@@ -57,10 +57,19 @@ We are establishing High-Performance Academy status to match the Carlson Gracie 
 
 *Demonstrate the site on your phone or laptop.*
 
-*   **Zero Friction Booking:** The site captures the lead (Email/Phone) immediately on the $99 Trial. No "Contact Us for Pricing" friction.
-*   **Mobile Speed:** Lightning-fast load times. The schedule and "Call" button are built for users on the go.
-*   **Lineage as Luxury:** Highlight the "About Us" section detailing the Carlson Gracie lineage. It immediately establishes authority (E-E-A-T) and trust to justify the new $215 pricing.
-*   **Automated Conversion:** Tell Arthur: "On Day 25 of their $99 trial, the system emails them: *'Love the mats? Sign for a year today and we'll waive your $199 enrollment fee.'* The website closes the deal so you can focus on the mats."
+*   **Speed & Trust:** Walk him through the ultra-fast load time, the instructor bios, and the modern UI.
+*   **The Conversion Mechanism:** Show how the Free Trial button is omnipresent, driving traffic directly into the Kicksite integration.
+*   **The Pitch:** "A pretty website is useless if it doesn't sell. This is a conversion machine built specifically for the Carlson Gracie demographic."
+
+---
+
+## Slide 6: Dominating Local Search (E-E-A-T & Google Business)
+
+*   **The Strategy Shift:** Explain that generic keyword stuffing is dead in 2026. AI search engines reward **E-E-A-T** (Experience, Expertise, Authoritativeness, Trustworthiness).
+*   **The Blueprint:**
+    *   **Google Business Profile (GBP):** We are going to relentlessly optimize the GBP. More photos, better categorized services, and hyper-specific geographic tagging.
+    *   **"Information Gain":** We aren't just going to list classes. We will create authentic, local content that AI loves: "Student of the Month" features, detailed seminar breakdowns (like Medeiros or Larkin), and real tournament results.
+    *   **The Pitch:** "We are going to give Google exactly what it wants: fresh, authentic, expert content. This turns Ruffhouse Renton into the unassailable digital authority in King County, capturing organic traffic before they even look at Gracie Barra down the street."
 
 ---
 
