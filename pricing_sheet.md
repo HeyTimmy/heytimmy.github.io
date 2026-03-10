@@ -13,13 +13,13 @@
 **Step 2: Choose Your Path**
 We don't hide our prices. We don't force you into "proprietary" $200 Gis. We just train.
 
-| Feature | The Foundation | The Squad (Buddy) | The Nomad | The Passport |
-| :--- | :--- | :--- | :--- | :--- |
-| **Monthly Rate** | **$195** | **$175 (per person)** | **$225** | **$275** |
-| **Paid in Full (Annual)** | **$2,150** *(Save $430)* | **$1,750** *(Save $350)* | N/A | **$2,750** *(Save $550)* |
-| **Commitment** | 12 Months | 12 Months | Month-to-Month | 12 Months |
-| **Enrollment** | $199 | $149 | $299 | $199 |
-| **Access** | Renton Only | Renton Only | Renton Only | Global Affiliates |
+| Feature | The Foundation | The Squad (Buddy) | The Nomad | The Passport | The Executive (4 Classes/Month) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Monthly Rate** | **$195** | **$175 (per person)** | **$225** | **$275** | **$100** |
+| **Paid in Full (Annual)** | **$2,150** *(Save $430)* | **$1,750** *(Save $350)* | N/A | **$2,750** *(Save $550)* | N/A |
+| **Commitment** | 12 Months | 12 Months | Month-to-Month | 12 Months | Month-to-Month |
+| **Enrollment** | $199 | $149 | $299 | $199 | $99 |
+| **Access** | Renton Only | Renton Only | Renton Only | Global Affiliates | Renton Only |
 
 ---
 

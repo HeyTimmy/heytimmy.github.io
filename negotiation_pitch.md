@@ -32,10 +32,10 @@ However, we also need to be brutally honest: **We cannot charge $250/mo right no
 Our strategy is to position Ruffhouse at a **Mid-High Premium Tier ($195/mo)**. This respects the elite Carlson Gracie lineage and striking instruction, but acknowledges we don't have a pristine, million-dollar mega-gym.
 
 We institute a 3-tier system:
-1.  **The Foundation ($195/mo, 12-Month):** The new standard. Replaces the $145 rate.
-2.  **The Squad ($165/mo per person, 12-Month):** Replaces the archaic 10% family discount. Drives high-value, multi-member signups.
-3.  **The Nomad ($225/mo, Month-to-Month):** An intentionally painful price tag. If they refuse a contract, they pay for the privilege of flexibility.
-4. **The Annual Paid-In-Full ($2,000/yr):** This is our strategic cash injector. It saves the student money, but gives the gym a massive upfront influx of cash. 
+1.  **$195/mo The Foundation (Unlimited):** This is the new baseline. It’s a necessary correction. We cannot provide a premium service (and fund a premium facility) on budget pricing.
+2.  **$100/mo The Executive (4 Classes/Month):** A low-barrier entry point designed specifically to catch tire-kickers, busy professionals, and older demographics who can't commit to a full schedule but want to train.
+3.  **$2,000/yr Paid-In-Full:** This is not a discount; it is a **funding mechanism**. Every PIF sold goes directly onto the "Punch List" (paint, ceiling tiles, new toilet, deep cleaning). This allows us to improve the gym *without* taking out a loan.
+4.  **$5/mo ACH Discount:** Encourages direct bank transfers, bypassing credit card processing fees and stabilizing revenue.
 
 **The Facility Improvement Plan (The Pitch):**
 *If we sell just THREE Paid-In-Full memberships, we immediately generate $6,000 in cash.*
